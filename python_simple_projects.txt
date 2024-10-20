@@ -1,0 +1,65 @@
+#rolling the dice only once
+import  random
+ip=input("Roll the dice? (Y/N): ")
+ip=ip.upper()
+if(ip=="Y"):
+    li=[1,2,3,4,5,6]
+    num1=random.choice(li)
+    num2=random.choice(li)
+    print((num1,num2))
+elif(ip=="N"):
+    print("thanks for rolling!")	
+    exit(0)
+else:
+    print("invalid input")
+    exit(0)
+ 
+#rolling dice multiple times until no or invalid
+import random
+while True:
+    ip=input("Roll the dice? (Y/N): ").upper()
+    if ip=="Y":
+        num1=random.randint(1,6)
+        num2=random.randint(1,6)
+        print(f"({num1},{num2})")
+    elif ip=="N":
+        print("thanks for rolling!")
+        break
+    else:
+        print("invalid input")
+        break
+
+#considering the number of times the dice to be rolled        
+import random
+num=int(input("enter the number of times u want to roll the dice: "))
+count=0
+while count<num:
+    ip=input("Roll the dice? (Y/N): ").upper()
+    if ip=="Y":
+        num1=random.randint(1,6)
+        num2=random.randint(1,6)
+        print(f"({num1},{num2})")
+        count+=1
+    elif ip=="N":
+        print("thanks for rolling!")
+        break
+    else:
+        print("invalid input")
+        break
+
+#guessing the random nymber
+import  random
+rnd=random.randint(1,100)
+while True:
+    num=int(input("enter the number between 1 too 100:"))
+    if num not in range(1,100):
+        print("invalid input")
+        break
+    elif num < rnd:
+        print("too low!")
+    elif num>rnd:
+        print("too high!")
+    else:
+        print("congratulations! u have guessed the correct number")
+        break
+           
